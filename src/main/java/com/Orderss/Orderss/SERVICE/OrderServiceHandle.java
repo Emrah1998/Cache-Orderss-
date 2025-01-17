@@ -64,6 +64,7 @@ public class OrderServiceHandle  {
     private OrderEntity fetchOrderIfExist(Long id) {
         return orderRepository.findByIdAndStatusNot(id,OrderStatus.DELETED)
                 .orElseThrow(RuntimeException::new);
+        //.
     }
 
 }
